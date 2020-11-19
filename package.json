@@ -1,0 +1,9 @@
+{
+  "private": true,
+  "name": "test-nest-angular",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {
+    "lerna": "^3.22.1"
+  }
+}
