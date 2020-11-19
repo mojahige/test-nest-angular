@@ -4,6 +4,7 @@ import { AppService } from './app.service';
 import { ServeStaticModule } from '@nestjs/serve-static';
 import { join } from 'path';
 import { TestModule } from './test/test.module';
+import { HerosModule } from './heros/heros.module';
 
 @Module({
   imports: [
@@ -12,6 +13,7 @@ import { TestModule } from './test/test.module';
       exclude: ['/api'],
     }),
     TestModule,
+    HerosModule,
   ],
   controllers: [AppController],
   providers: [AppService],
