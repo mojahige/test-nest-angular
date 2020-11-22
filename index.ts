@@ -1,9 +1,9 @@
-import { PrismaClient, HerosCreateInput } from "@prisma/client"
+import { PrismaClient, HeroCreateInput } from "@prisma/client"
 
 const prisma = new PrismaClient()
 
-async function createHero(data: HerosCreateInput) {
-  return prisma.heros.create({ data })
+async function createHero(data: HeroCreateInput) {
+  return prisma.hero.create({ data })
 }
 
 async function main() {
@@ -19,7 +19,7 @@ async function main() {
     createHero({ name: 'Tornado' })
   ])
 
-  const allHeros = await prisma.heros.findMany()
+  const allHeros = await prisma.hero.findMany()
   console.log(allHeros)
 }
 
