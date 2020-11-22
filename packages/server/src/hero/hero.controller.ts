@@ -1,4 +1,4 @@
-import { Controller, Get } from '@nestjs/common';
+import { Controller, Get, Param } from '@nestjs/common';
 import { HeroService } from './hero.service';
 import { Hero as HeroModel } from '@prisma/client';
 
@@ -9,5 +9,10 @@ export class HeroController {
   @Get()
   getHeros(): Promise<HeroModel[]> {
     return this.heroService.heros();
+  }
+
+  @Get(':id')
+  getHero(@Param('id') id: string): Promise<HeroModel> {
+    return this.heroService.hero({ id: Number(id) });
   }
 }
