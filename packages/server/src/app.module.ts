@@ -3,7 +3,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { ServeStaticModule } from '@nestjs/serve-static';
 import { join } from 'path';
-import { HerosModule } from './heros/heros.module';
+import { HeroModule } from './hero/hero.module';
 
 @Module({
   imports: [
@@ -11,7 +11,7 @@ import { HerosModule } from './heros/heros.module';
       rootPath: join(__dirname, '../../client/', 'dist/client'),
       exclude: ['/api'],
     }),
-    HerosModule,
+    HeroModule,
   ],
   controllers: [AppController],
   providers: [AppService],
