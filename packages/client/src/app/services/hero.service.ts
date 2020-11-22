@@ -7,7 +7,7 @@ import { MessageService } from './message.service';
 
 @Injectable({ providedIn: 'root' })
 export class HeroService {
-  private heroesUrl = 'api/heros';
+  private heroesUrl = 'api/hero';
 
   constructor(
     private http: HttpClient,
