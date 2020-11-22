@@ -7,7 +7,7 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Heros {
-  id   Int     @id @default(autoincrement())
-  name String?
+model Hero {
+  id   Int    @id @default(autoincrement())
+  name String
 }
