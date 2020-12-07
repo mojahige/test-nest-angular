@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common';
 import { HeroService } from './hero.service';
-import { PrismaService } from '../services/prisma.service';
+import { PrismaService } from '../prisma/prisma.service';
 import { HeroController } from './hero.controller';
 
 @Module({
